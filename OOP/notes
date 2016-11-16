@@ -1,3 +1,38 @@
 
 
 Najważniejszą funkcjonalnością języka obiektowego jest polimorfizm
+
+#pragma once // zależne od kompilatora niketóre archaiczne kompilatory nie wspierają tej instrukcji preprocesora
+
+w każdej metodzie w cpp przekazujemy this pointer
+
+funkcje wirtualne vtable
+
+vptr albo vtable
+
+to jest tablica wskaźników na funkcje
+
+
+Nie trzeba powtażać w klasie pochodnej słówka virtual
+
+słówko override na końcu metody sprawdza czy metoda, którą nadpisujemy jest virtual
+ void accelerateTo(int newSpeed) override;
+
+
+koncepcja
+Tell don't ask
+
+
+stack heap pointers
+
+overriding // przysłanianie
+overwriting
+
+
+jeśli nie zaimplementuje się destruktorów
+to i tak gcc stworzy 2 destruktory jeden do niszczenia obiektu na stosie i jeden do niszczenia obiektu na stercie
+dlatego przy codecoverage najczęściej podświetlone na czewrono są destruktory
+bo nikt nie alokuje obiektu raz na stosie a raz na stercie
+
+c-tors, d-tors = delete; nie znaczy że tej metody tam nie ma, ale to, że nie wolno mi jej wykonać
+
