@@ -36,3 +36,94 @@ bo nikt nie alokuje obiektu raz na stosie a raz na stercie
 
 c-tors, d-tors = delete; nie znaczy że tej metody tam nie ma, ale to, że nie wolno mi jej wykonać
 
+-------------
+clang llvm
+drzewo AST,
+
+---------------
+
+RVO
+Return Value Optimalization // zmiennej lokalnej zwracanej przez wartość nie kopiuje a przenosi, od standardu c++11 jest to gwarantowane
+initialization list
+move semantics
+
+std::move nic nie przenosi jest operatorem rzutowania na RValue
+
+---------------------------------
+
+std::move jeśli nie będzie mógł przekonwertować na Rvalue to zwróci Lvalue
+std::forward jeśli nie będzie mógł
+
+-------------------------------------------
+
+no naked new
+
+RAII
+implemntacja RAII za pomocą używania smart pointerów
+destruktorów nie
+
+Rule of 3 and rule of 5 does not aply when using RAII
+konstruktor
+konstruktor kopiujący
+operator przenoszący
+operator przypisania
+
+auto może nas u
+
+new zwraca void pointer
+
+malloc i calloc odpowiadają tylko za alokację pamięci
+new oprócz tego wywołuje konstruktor
+i zwraca wskaźnik konkretnego typu
+malloc i calloc zwraca (void *)
+
+memset
+
+free vs delete and delete[]
+--------------------------------------
+
+Dynamic binding
+
+
+------------------------------------
+
+problem diamentu
+
+----------------------------------------
+
+float jest inaczej reprezentowany w pamięci
+
+reinterpreter_cast
+procesory sygnałowe dsp
+
+porównujemy 4 chary
+każdy ma jeden bajt
+
+możemy je upchnąć na jednym int
+wtedy zamiast 4 porównań mamy jedno porównanie
+
+
+operacja podzielenia przez 3.
+mnoży się przez jakąś konkretną dużą liczbę i ignoruje ostatnie 2 bity
+
+------------------------------------------------
+
+
+DRY dont repeat yourself. // używaj metod, templatów, grupowanie obiektów
+KISS keep it simple stupid.  // W większości przypadków nie potrzebujemy zaawansowanych technologii
+YAGNI you are gonna need it //
+LoD Law of Demetter // musimy uprościć użycie obiektu za pomocą jakiejś jednej metody
+
+-------------------------------------------
+
+Code organization
+by file
+by used frameworks and design patterns
+by application functionality
+
+MVC
+Model View Controller
+
+---------------------------------------------
+
+
