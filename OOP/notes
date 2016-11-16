@@ -179,5 +179,71 @@ singletona dla systemu z wieloma wątkami
 
 -------------------------------------------------------
 
+RTTI
+Run Time Type Information
+
+bazują na tym dynamic_cast
+
+python to przykład języka, który nie jest statycznie typowany
+
+C++ jest Silnie i statycznie typowany
+generalnie jeśli chcemy cokolwiek zrobić z obiektem w cpp
+to musimy znać jego typ
+
+RTTI oznacza że w trakcie działania programu jesteśmy w stanie
+określić typ obiektu.
+Przykładowa fabryka która wypluwa samochody (przykład cpp)
+ukrywa typ klasy.
+
+dynamic_cast pozwala wydłubać ten typ na siłę
+
+
+typeid (with/without virtual method Ex)
+pozwala uzyskać nazwę klasy ale też jednoznaczny identyfikator
+bo nazwy klas mogą się powtarzać w różnych namespacach
+
+
+decltype tylko rozwiąże typ na poziomie kompilacji
+w runtimie już nie. Dlatego musimy mieć dynami_cast<> żeby określić typ
+
+typeid działa poprawnie tylko wtedy gdy mamy vtable czyli przynajmniej jedna metoda powinna być virtual
+
+----------------------------------------------------------------
+
+
+dynamic_cast może rzutować na wskaźnik albo na referencję
+
+Referencja nie może być pusta
+czyli jeśli coś się nie uda rzuci wyjątek bad_cast
+jeśli rzutowaliśmy na wskaźnik i się nie uda rzutowanie to zwróci nullptr
+
+---------------------------------------------------------------------------------
+
+different kinds of interfaces
+GUI  general graphical user interface
+Gesture
+framework interface
+library interface
+class interface
+function interface
+template/Generic interface
+
+Rule 0
+Easy to use correctly, easy to understand, hard to misused
+
+Wszystkie wskaźniki w interfejsie są złym pomysłem
+
+keybord, mouse, GUI
+touch interface
+car
+
+----------------------------------------------------------------------------
+
+
+
+
+
+
+
 
 
