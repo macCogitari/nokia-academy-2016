@@ -241,6 +241,31 @@ car
 
 
 
+Dane kontrolne
+licznik referencji dla share pointera
+i dla weak pointera
+
+std::make*
+alokują jeden blok pamięci na dane pointera (obiekt) i dane kontrolne
+
+//dopóki weak pointery się odwołują do
+
+
+-----------------------------------------------------------------------------
+
+How to write a class which can be created only by new?
+-private destructor
+-overload new and private constructor
+
+
+----------------------------------------------------------------------------------
+
+NULL pointer issue
+
+
+C++ Core Guidelines
+
+
 
 
 
