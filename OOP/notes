@@ -89,6 +89,12 @@ Dynamic binding
 
 problem diamentu
 
+ambigous wywołanie
+
+rozwiązanie poprzez dziedziczenie typu virtual
+
+
+
 ----------------------------------------
 
 float jest inaczej reprezentowany w pamięci
@@ -125,5 +131,53 @@ MVC
 Model View Controller
 
 ---------------------------------------------
+
+
+Granice w kodzie
+
+Boundries
+granice wyznaczamy przez interfejsy
+są istotne dla deploymentu aplikacji.
+perfect boundries
+
+
+--------------------------------------------
+
+
+enum class TypeOfLetter{a, b, c}
+       /\ słówko class w tym miejscu wymusza
+       użycie tego enuma z kwalifikatorem dostępu
+
+TypeOfLetter::a
+
+
+
+--------------------------------------------
+
+
+anonimowe namespacey
+
+namespace {
+
+}
+
+działa jak static
+
+W anonimowym namespacie często umieszcza się
+
+Jeśli się użyje słówka inline
+to można się zdziwić
+
+
+
+----------------------------------------
+
+do 2011 c++ nie gwarantował atomowości inicjalizacji zmiennych statycznych
+skutkiem czego przed c++11 nie było możliwości bespiecznego zaimplementowania
+singletona dla systemu z wieloma wątkami
+
+
+-------------------------------------------------------
+
 
 
