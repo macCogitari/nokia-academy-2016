@@ -223,3 +223,16 @@ bidirectional iterator // implementuje ++ oraz --
 
 random access iterator // implementuje arytmetykę iteratorów
 
+advence() // inkrementuje wielokrotnie iterator
+
+dobrą praktyką jest używanie funkcji begin() i end()
+zamiast metod z wewnątrz kontenera
+
+--------------------------------------
+
+reverse_iterator
+move_iterator to iterator przenoszący
+
+
+contiguousIterator
+
