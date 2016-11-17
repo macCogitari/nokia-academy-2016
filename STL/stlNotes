@@ -2,10 +2,83 @@
 
 STL notes
 
+kontenery:
+
 array
 vector
 deque // double ended queue
 list
 forward_list
+
+
+rbegin rend // operatory wsteczne
+
+
+cbegin cend crbegin crend // w c++11 const iterator
+
+
+jednokierunkowa lista nie ma metody size()
+bo z założenia ma być bardzo upakowana
+
+
+resize
+front back //pozwalają na dostęp przez referencję do pierwszego albo ostatniego elementu
+
+
+assign
+
+emplace // możemy stworzyć obiekt w miejscu, nie podajemy obiektu tylko argumenty konstruktora danego obiektu
+insert // musimy podać obiekt
+erase // musimy podać iterator do miejsca z którego obiekt chcemy usunąć
+
+swap // możemy zamienić dwa elementy z d
+
+resize // inicjalizuje obiekt domyślnie jeśli zwiększa rozmiar kontenera
+// jeśli obiekt nie ma domyślnego konstruktora to się nie skompiluje resize
+
+clear // usuwa elementy kontenera wywołuje destruktory
+
+--------------------------------------------------------------
+
+Architektura komputerów prog Biernat
+
+
+std::array<>
+
+array ma stały rozmiar
+jest definiowany na poziomie parametru szablonowego, nie można go zmieniać później
+
+jeśli zrobimy new array to będzie cały array zaalokowany na stercie
+ale domyślnie alokowany na stosie
+w pamięci podręcznej  dzięki czemu może szybciej je wykonywać
+w cacheu na
+jeśli ładujemy element z arrayu to kolejne elemnty też będą załadowane do cachu
+bo jest ciągłość pamięci
+contiguous storage on stack
+funkcja data()
+służy do pobrania wskaźnika na pierwszy element tablicy.
+ale nie powinniśmy zwalniać tego wskaźnika
+to byłoby undefined behaviour
+
+random acces O(1)
+
+fixed-size aggregate
+stały rozmiar tej tablicy nie ma resize()
+wszystkie elementy się tworzą od razu
+
+
+std::array może być traktowany jako std::tuple czyli krotka
+czyli nienazwana struktura
+możemy się dostać po indeksach
+pure data no hidden fields
+cache-friendly
+Nie ma żadnych dodatkowych pól
+
+.at(x) rzuca wyjątkiem jeśli wyjdziemy poza zakres array
+
+
+------------------------------------------
+
+
 
 
