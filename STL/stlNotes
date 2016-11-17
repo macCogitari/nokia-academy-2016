@@ -76,8 +76,16 @@ Nie ma żadnych dodatkowych pól
 
 .at(x) rzuca wyjątkiem jeśli wyjdziemy poza zakres array
 
+dla array zawsze size i max_size zwróci tę samą wartość
+
+przy słapie elementy muszą być tego samego typu
+w przypadku typu array
+to będą także ten sam rozmiar tablic
 
 ------------------------------------------
+
+
+
 
 
 
