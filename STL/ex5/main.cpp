@@ -24,6 +24,6 @@ int main(int argc, char *argv[])
 //    _set
     std::cout << std::distance(_set.begin(), _set.lower_bound(8)) << std::endl;
     std::cout << std::distance(_set.begin(), _set.upper_bound(8)) << std::endl;
-    std::cout << std::distance(_set.begin(), _set.equal_range(8).second) << std::endl;
+    std::cout << std::distance(_set.equal_range(8).first, _set.equal_range(8).second) << std::endl;
     return 0;
 }

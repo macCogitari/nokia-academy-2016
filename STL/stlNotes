@@ -134,5 +134,53 @@ forward_list
 wydajna pamięciowo
 nie ma pola size
 
+---------------------------------------------
+
+kontenery asocjacyjne
+Associative containers
+
+set zwykły zbiór
+konstrukcja jest w postaci drzewa z kluczem
+
+set
+multiset
+map
+multimap
+
+unordered containers
+
+-----------------------------------------
+
+czas wstawiania w drzewo
+O(logN)
+
+
+support bidirectional iterators
+klucze są const nie można ich zmieniać
+
+implementowane za pomocą drzez binarnego przeszukiwania
+drzewo czerwono czarne
+
+
+emplace_hint() możemy podać iterator który jest zbliżony do elementu gdzie chcemy wstawić
+wtedy operacja wstawienia może być szybsza
+
+
+
+find() zwraca iterator podanego elementu
+
+equal_range() podaje nam parę iteratorów początek i koniec
+lower_bound() // iterator na pierwszy element który pasuje (jest większy niż klucz)
+upper_bound() // iterator na element za elementem który jest nie mniejszy niż klucz
+
+key_comp() // komparator do klucza
+value_comp() // komparator do typów wartości???
+
+mapa to inaczej słownik w pythonie
+
+mapa ma w sobie kilka elementów
+
+at() // zwróci element const ewentualnie rzuci wyjątek jeśli go nie było
+operator[] // zwróci element jeśli nie ma elementu to go stworzy
 
 
