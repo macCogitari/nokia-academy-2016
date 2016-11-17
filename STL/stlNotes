@@ -109,4 +109,30 @@ specjalizacja zoptymalizowania
 jest pośredni dostęp do elementów poprzez elementy proxy
 ponieważ nie można zwrócić referencji do bitu
 
+----------------------------------------------------------
+
+deque
+deque jest nieco wolniejszy od vectora
+jest trochę trudniejszy
+
+odwołanie do jednej tablicy
+a potem odwołanie do drugiej tablicy
+w której znajduje się obiekt
+
+non-continuous storage
+
+-------------------------------------------------------------
+
+std::list
+splice // przenosi elementy z jednej listy do drugiej listy
+unique // usuwa duplikaty na liście
+
+------------------------------------------------------------------
+
+forward_list
+
+wydajna pamięciowo
+nie ma pola size
+
+
 
