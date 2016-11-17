@@ -2,12 +2,12 @@
 #include <iterator>
 #include <array>
 
-using namespace std;
+//using namespace std;
 
 template <class T, std::size_t N>
-ostream& operator<<(ostream& o, const array<T, N>& arr)
+std::ostream& operator<<(std::ostream& o, const std::array<T, N>& arr)
 {
-    copy(arr.cbegin(), arr.cend(), ostream_iterator<T>(o, " "));
+    std::copy(arr.cbegin(), arr.cend(), std::ostream_iterator<T>(o, " "));
     return o;
 }
 
@@ -23,8 +23,8 @@ int main(int argc, char *argv[])
 
     myArr.swap(secondArray);
 
-    cout << myArr << endl;
-    cout << secondArray << endl;
+    std::cout << myArr << std::endl;
+    std::cout << secondArray << std::endl;
 
     return 0;
 }
