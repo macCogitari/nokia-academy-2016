@@ -85,6 +85,11 @@ to będą także ten sam rozmiar tablic
 ------------------------------------------
 
 
+std::vector
+
+dynamicznie alokowany stały blok pamięci na stercie (heap)
+cache-friendly
+amortyzowany czas wstawiania elementu na koniec wektora
 
 
 
