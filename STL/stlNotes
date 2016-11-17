@@ -183,4 +183,33 @@ mapa ma w sobie kilka elementów
 at() // zwróci element const ewentualnie rzuci wyjątek jeśli go nie było
 operator[] // zwróci element jeśli nie ma elementu to go stworzy
 
+-------------------------------------------------------------------------
+
+unordered associative containers
+
+funkcje hashujące to to samo co funkcje skrótu
+
+key_eq() // czy klucze są równe
+
+
+---------------------
+
+Adaptery to są takie typy kontenery
+które rozszerzają funkcjonalność albo ograniczają funkcjonalność danego kontenera
+w specjalizacji wymagają podania typu kontenera
+
+stack
+queue
+
+----------------------------------------
+
+other conainers
+string
+wstring
+valarray // do zbioru operacji na liczbach
+tuple // struktura danych oparta na szablonach
+bitset // na stosie jak vector<bool>
+
+-----------------------------------------------
+
 
