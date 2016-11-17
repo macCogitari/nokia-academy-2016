@@ -213,3 +213,13 @@ bitset // na stosie jak vector<bool>
 -----------------------------------------------
 
 
+
+input iterator // służy do odczytu wartości. RValue
+output iterator // służy do zapisu wartości.
+
+forward iterator  // może być zainicjalizowany za pomocą domyślnego konstruktora, implementuje ++
+
+bidirectional iterator // implementuje ++ oraz --
+
+random access iterator // implementuje arytmetykę iteratorów
+
