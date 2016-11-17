@@ -5,7 +5,7 @@
 int main(int argc, char *argv[])
 {
 
-    std::vector<int> vec{1,2,4,4,6};
+    std::vector<int> vec{1,2,4,5,6};
     vec.erase(vec.begin());
     vec.emplace_back(5);
     vec.emplace( vec.begin(), 12);
