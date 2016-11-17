@@ -23,13 +23,14 @@ int main(int argc, char *argv[])
 //    sys	0m0.080s
 
 //    numbers./
-    std::list<int>::iterator iter = numbers.begin();
+//    std::vector<int>::iterator iter = numbers.begin();
 
-    for(int i=1; i<index; ++i){
-        ++iter;
-    }
+//    for(int i=1; i<index; ++i){
+//        ++iter;
+//    }
 
-    std::cout <<  (*iter) << std::endl;
+//    std::cout <<  (*iter) << std::endl;
+    std::cout << numbers[index-1] << std::endl;
 
 //    real	0m1.618s
 //    user	0m1.516s
