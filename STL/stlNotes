@@ -100,3 +100,13 @@ emplace jeśli nie mamy jeszcze elementu
 push_back jeśli element już istnieje
 
 
+
+-------------------------------
+
+std::vector<bool>
+
+specjalizacja zoptymalizowania
+jest pośredni dostęp do elementów poprzez elementy proxy
+ponieważ nie można zwrócić referencji do bitu
+
+
