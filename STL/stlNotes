@@ -91,7 +91,12 @@ dynamicznie alokowany stały blok pamięci na stercie (heap)
 cache-friendly
 amortyzowany czas wstawiania elementu na koniec wektora
 
+reserve()
+capacity // zaalokowana pamięć (ile elementów może zostać wstawione przy obecnie zaalokowanej pamięci)
+max_size // ile pamięci może zostać potencjalnie zaalokowane (ile elementów może zostać wstawione do całej dostępnej pamięci)
 
-
+emplace_back vs push_back
+emplace jeśli nie mamy jeszcze elementu
+push_back jeśli element już istnieje
 
 
