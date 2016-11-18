@@ -264,6 +264,12 @@ Algorytmy
 range base for
 std::for_each
 
+------------------------------------
 
+transform nasz algorytm dostaje zakres
+generate generuje i zmienia jak transform
+
+
+remove vs erase
 
 
