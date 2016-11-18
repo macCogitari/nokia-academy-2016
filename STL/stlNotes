@@ -236,3 +236,34 @@ move_iterator to iterator przenoszący
 
 contiguousIterator
 
+
+-----------------------------------------------------------------
+
+
+funktory
+
+
+lamdy
+
+std::function
+jak wskaźnik na funkcję
+np
+std::function<void(int)> f_display;
+zwraca voida przyjmuje int
+
+// ale może też przyjąć lambdę
+i jeśli byśmy chcieli lambdę nazwać to musimy przez auto
+a tego do klasy nie wstawimy jako pole
+żeby wstawić do klasy to musimy zrobić to przez pole std::function<>
+
+
+---------------------
+
+Algorytmy
+
+range base for
+std::for_each
+
+
+
+
