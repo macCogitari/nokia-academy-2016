@@ -98,10 +98,223 @@ drzewo AST
 IAR intermediate .... representation
 
 
+-----------------------------------
+
+obiekt stały
+const ob;
+może wywoływać tylko metody const, czyli takie, które nie zmieniają stanu obiektu
+
+Nie ma kopii
+return value optimization sprawia, że wszystkie lokalne zmienne są movowane
+i nie są kopiowane przy zwracaniu przez wartość
+
+
+-----------------
+
+no memset
+
+memset może wyzerować vtable, więc nie będzie można się do niego odwołać
+np przy destrukcji obiektu
+
+---------------------
+
+usefull Macros
+header guard / pragma once
+
+__PRETTY_FUNCTION__
+
+#define CLEAN (ptr)
+free(ptr);
+ptr = NULL;
 
 
 
+Unix spełnia standard posixowy
+a liniux tylko deklaruje że spełnia standard posixowy
+
+Single Unix Standard
+SUS następca Posix
+SUS/Posix
+verify which SUS/Posix standard is available
+
+clean pointer
+
+redefine variable names
 
 
+-------------------------------------
+tego nigdy nie robić:
+#ifdef __linux__
+//....
+#elif _WIN32
+// ..
+#endif
+ten ifdef szatkuje kod
+zamiast tego
+używać backend switching
+jednego headera i 2 cpp
 
 
+-----------------------------------------------
+
+check stl
+check boost
+ask google
+ask stackoverflow
+
+jeśli potrzebujemy jakiś algorytm
+sprawdźmy czy nie ma adaptera
+
+
+--------------------------------------------
+
+never put using namespace into *h file
+in general using namespace std is bad idea
+
+for long name space use alias
+
+---------------------------------------------
+
+//lepiej nie używać
+//auto przy dostępie do std::vector<bool>
+
+--------------------------------------------
+
+pointer ownership problem
+
+
+kto ma zwolnić pamięć?
+czy mogę bezpiecznie czytać/ modyfikować niezaleźnie od innych wątków?
+
+
+-----------------------------------------------
+
+Inheritance problems
+
+1.
+std::unique_ptr<A> b(new B());
+domyślne parametry definiuje typ
+
+nie stosować domyślnych wartości parametrów w interfejsach
+
+2.
+typ określa jaka statyczna wersja metody będzie wywoływana
+
+
+----------------------------------------------------------
+
+assert vs static_assert
+
+trait nie działa
+traity chronią nas przed niedoskonałości templatów
+static_asserty chronią nas przed użyciem typów na które nie jesteśmy gotowi
+
+what should be aserted?
+assert function result not a function call
+nigdy nie asertujemy assert(func())
+dlatego, że flaga -DNDEBUG może wyłączyć wszystkie
+asserty wtym wywołania niektórych funkcji, które są do assertów przekazywane.
+-Wall może nas uratować
+
+------------------------------------------------------------
+
+Argument depended lookup
+the real reason to not use using namespace
+different implementation on different compilers
+
+Jeśli jesteś parametrem to będę przeszukiwać namespacea sprzed nazwy funkcji
+ale to zależy od kompilatora
+
+
+---------------------------------------------------------
+
+lamda to jest obiekt klasy
+w momencie deklaracji kopiuje wszystkie pola [=]
+
+---------------------------------------------------------
+
+most popular design pattern
+
+,
+// dygresja ............... type eraser
+factory, Command, Tepmlate method, Strategy, Proxy, Adapter, Decorator, Visitor, Facade, Observer
+
+do not use Singleton
+breaks OOP rules
+jest globalną zmienną.
+hard to test/ make test complicated
+
+niejawne powiązanie między testami
+zostanie stworzony jeden obiekt współdzielony między testami.
+
+very often lead to memory leak
+może ukrywać wycieki pamięci
+możemy mieć nie tylko wyciek pamięci ale też wyciek zasobów
+socketów, portów, semaforów, deskryptory plików
+
+niemożliwy do zaimplementowania przed C++11
+żeby był bezpieczny dla wielu wątków
+
+-------------------------------------------------------
+
+Nie robić double check lock design pattern
+kompilator to może zoptymalizować
+wtedy kod zmieni znaczenie
+
+
+-------------------------------------------------------
+
+
+Singleton Meiers
+
+static Singleton* getInstance()
+{
+    static Singleton instance;
+    return &instance;
+}
+
+ale dwa wątki mogą tę metodę wywołać dwa razy
+jest alokowana na stosie dlatego mamy pewność
+że destruktor się wykona przy zwalnianiu pamięci na stosie
+
+wymóg standardu c++11
+mówi, że inicjalizacja pola statycznego jest operacją atomową
+przez to bezpieczną dla aplikacji wielowątkowych
+
+--------------------------------------------------------
+
+youtube
+atomic weapon c++
+
+
+-----------------------------------------------------------
+
+popularne użycie Singletonów
+logger
+device driver
+factory implementation as singleton fabryka Alexandrescu
+
+--------------------------------------------------------
+
+inne problemy z Singletonów
+how to reset Singleton while running one test after another?
+how to handle false memory leak?
+What if one Singleton depend on another one? atexit
+atexit to jest kolejka LIFO rejestrująca obiekty do zniszczenia
+
+Singleton phenixowy, potrafi się podnieść z popiołów używa atexit
+
+
+------------------------------------------------------------
+
+monostate
+wszystkie pola i metody statyczne
+Nie da się w prosty sposób stworzyć obiektu takiej klasy
+za pomocą customowego konstruktora
+
+-----------------------------------------------------------
+Singleton implementation
+just create one instance of class.
+
+
+-------------------------------------------------------------
