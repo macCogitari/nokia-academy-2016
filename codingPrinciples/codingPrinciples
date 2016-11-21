@@ -1,0 +1,107 @@
+
+
+Powinniśmy celować w
+5 linijek na funkcję
+
+argumenty
+do 3
+bez bool
+
+names length appropriate to scope
+
+do not use Hungarian notation
+
+nigdy nie robić output parametrów
+
+TTCN3
+
+nie używać goto
+
+switch case;
+
+nested if else;
+christmass tree design pattern
+
+bool flagi
+
+komentarze powinny informować dlaczego ten kod tutaj jest
+a nie co robi krok po kroku
+
+optymalizacja
+do it only when code is done and tested.
+
+add compilation flag
+sse operacje
+
+
+find slow code
+
+check how you read data example with array
+2d array
+
+change algorithm
+
+na samym końcu do dirty hack in code.
+
+-------------------------------------------------------
+
+SOLID principles
+dotyczą polimorfizmu
+
+Single resposibilitity principle
+// klasa / metoda powinna robić jedną rzecz
+// łączenie funkcjonalności jest dość powszechne
+
+Open close principle
+// zasada otwarte zamknięte
+// klasa powinna być otwarta na rozszerzanie funkcjonalności
+// ale zamknięta na modyfikację
+// rzeba przewidzieć co będzie się zmieniało i to trzeba będzie schować w interface
+
+Liskov substitution principle
+// podstawa projektowania obiektowego
+// każde dziecko może być używane jak rodzic
+// każda klasa pochodna powinna móc być używana jak klasa bazowa
+
+Interface segregation
+// segregowanie interfejsów i do kogo te interfejsy należą
+// do jakiego interfejsu należy dana metoda
+// interfejs należy do tego kto go używa
+// klasa która implementuje dany interfejs
+
+Dependency inversion
+// zmieniamy kierunek zależności
+// moduły wysokiego poziomu nie zależą od modułów niskiego poziomu
+// określają tylko interfejsy
+
+-----------------------------------------------
+
+C++ is not C
+
+function pointer -> std::function, std::bind lambda
+
+switch/case -> std::map<std::function<> >
+inną opcją jest zastosowanie polimorfizmu
+
+array -> std::vector
+
+void* -> polymorphism
+
+no memset
+
+#MACRO -> template
+makra nie podlegają walidacji
+kod przestaje być debuggowalny
+#define -> constexpr
+
+drzewo AST
+IAR intermediate .... representation
+
+
+
+
+
+
+
+
+
