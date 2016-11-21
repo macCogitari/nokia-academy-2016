@@ -1,13 +1,12 @@
 
 #include "StringToNumberConverterFactory.h"
-#include "Complex.h"
-#include "Integer.h"
-#include <algorithm>
-#include <memory>
+
 
 
 StringToNumberConverterFactory::StringToNumberConverterFactory(
         const NumberType &ct)
+    :
+      converterType{ct}
 {
 
 }

@@ -5,6 +5,7 @@
 #include <algorithm>
 #include "Integer.h"
 //#include "Complex.h"
+//#include "StringToNumberConverterFactory.h"
 
 //#BAD_CODE
 

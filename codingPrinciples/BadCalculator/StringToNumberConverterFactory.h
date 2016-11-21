@@ -7,7 +7,14 @@
 
 #include <string>
 #include <functional>
+#include <algorithm>
+#include <memory>
+
 #include "Number.h"
+
+#include "Complex.h"
+#include "Integer.h"
+
 
 enum class NumberType {Integer, Complex};
 
