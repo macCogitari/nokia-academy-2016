@@ -1,5 +1,6 @@
 
 #include "StringToNumberConverterFactory.h"
+#include <cassert>
 
 
 
@@ -35,6 +36,7 @@ StringToNumberConverterFactory::create(){
         };
         break;
     default:
+        assert(0 && "unknown conversion type \n");
         break;
     }
     return returnFunction;
