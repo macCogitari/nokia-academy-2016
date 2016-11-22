@@ -1,2 +1,109 @@
 
 
+zrobić tyle testów żeby mieć pewność, że kod działa
+warto mieć przetestowaną każdą linijkę kodu
+i proces TDD pomaga osiągnąć to założenie
+
+warto testować corner casey
+czyli przypadki brzegowe.
+
+z reguły wychodzą podczas specyyficznych przypadków użycia
+
+
+Najpierw piszemy test.
+Kiedy przekonamy się, że test sprawdza to co chcemy
+wtedy piszemy dopiero kod
+.
+
+Sprawdzamy możliwie małe elemty w testach
+
+
+using namespace testing;
+
+struct SetLikeClassTest : public Test    // <--- nazwa test suite
+{
+    SetLikeClass<int> sut;
+};
+
+
+//////////////////
+----------------------------------------
+
+zasada
+One Assert Rule
+mówi o tym, że jeden test sprawdza tylko jedną rzecz
+co nie znaczy, że musi być tylko jeden assert.
+
+
+----------------------------------------------
+
+Red Green refactor
+
+jak przebiega proces testów
+
+najpierw piszemy najprostszy test jaki można wymyślić
+
+okazało się że się nie kompiluje
+
+bo nie było klasy
+więc piszemy klasę
+kompiluje się ale test nie przechodzi
+to dobrze
+
+------------------------------------------
+
+
+setUp Test suite
+
+metoda wywoływana przy początku test suita
+
+np połączenie z baż danych
+
+a potem rozłączenie w teardown test case
+
+Przy uruchomieniu każdego testu
+jest tworzony testsuite i na końcu jest niszczony
+
+--------------------------------------------------
+
+zasada Red Green refactor
+
+nie przechodzi test czerwony
+implementacja
+test ok faza zielona
+refactoring
+
+nie warto na raz zmieniać kodu i testu
+testy mogą nam podpowiedzieć co się zepsuło w kodzie
+
+-----------------------------------------------------
+
+nawet najdrobniejszy błąd powinien sprawić, że się zatrzymujemy
+
+-------------------------------------------------------
+
+napisać
+grę w kółko i krzyżyk
+
+
+--------------------------------------------------
+
+use case
+
+nowa gra
+losujemy pierwszego gracza
+
+wykonaj ruch
+sprawdź stans
+
+automatyczne prze
+zakończ grę
+
+----------------------------------
+
+NiceMock<BoardMock> board; // nie robi nic jak coś jest wywołane
+StricktMock<BoardMock> board; // jeśli metoda niespodziewana zostanie wywołana
+                               // to test się wywali z błędem.
+BoardMock board; // jeśli metoda niespodziewana zostanie wywołana
+                // to będzie warning // nugge mock
+
