@@ -1,0 +1,3 @@
+/home/mtrojnar/na/NAfork/nokia-academy-2016/modern_cpp/build/CMakeFiles/rebuild_cache.dir
+/home/mtrojnar/na/NAfork/nokia-academy-2016/modern_cpp/build/CMakeFiles/edit_cache.dir
+/home/mtrojnar/na/NAfork/nokia-academy-2016/modern_cpp/build/CMakeFiles/modern_cpp.dir
