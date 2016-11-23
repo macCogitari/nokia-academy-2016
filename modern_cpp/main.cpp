@@ -10,18 +10,18 @@
 
 using namespace std;
 
-typedef vector<Shape*> Collection;
+using  Collection = vector<Shape*>;
 
-bool sortByArea(Shape* first, Shape* second)
+constexpr auto sortByArea(Shape* first, Shape* second)
 {
-    if(first == nullptr || second == nullptr)
+    if(first != nullptr &&  second != nullptr)
     {
-        return false;
+        return (first->getArea() < second->getArea());
     }
-    return (first->getArea() < second->getArea());
+    return false;
 }
 
-bool perimeterBiggerThan20(Shape* s)
+constexpr auto perimeterBiggerThan20(Shape* s)
 {
     if(s)
     {
@@ -30,7 +30,7 @@ bool perimeterBiggerThan20(Shape* s)
     return false;
 }
 
-bool areaLessThan10(Shape* s)
+constexpr auto areaLessThan10(Shape* s)
 {
     if(s)
     {
@@ -39,44 +39,67 @@ bool areaLessThan10(Shape* s)
     return false;
 }
 
-void printCollectionElements(const Collection& collection)
+auto printCollectionElements(const Collection& collection)
 {
-    for(Collection::const_iterator it = collection.begin(); it != collection.end(); ++it)
+//    for(Collection::const_iterator it = collection.begin(); it != collection.end(); ++it)
+//    {
+//        if(*it != nullptr)
+//        {
+//            (*it)->print();
+//        }
+//    }
+    for(const auto& it: collection)
     {
-        if(*it != nullptr)
+        if(it != nullptr)
         {
-            (*it)->print();
+            (it)->print();
         }
     }
 }
 
-void printArea(std::string name, double area)
+auto printArea(std::string name, double area)
 {
     std::cout << "thread_id: " << std::this_thread::get_id() << " - " << name << ": " << area << std::endl;
 }
 
-void printAreas(const Collection& collection)
+auto printAreas(const Collection& collection)
 {
     std::vector<std::thread> threads;
-    for(vector<Shape*>::const_iterator it = collection.begin(); it != collection.end(); ++it)
+//    for(vector<Shape*>::const_iterator it = collection.begin(); it != collection.end(); ++it)
+//    {
+//        if(*it != nullptr)
+//        {
+//            std::thread th(printArea, (*it)->getName(), (*it)->getArea());
+//            threads.push_back(std::move(th));
+//        }
+//    }
+    for(const auto & it: collection)
     {
-        if(*it != nullptr)
+        if(it != nullptr)
         {
-            std::thread th(printArea, (*it)->getName(), (*it)->getArea());
+            std::thread th(printArea, (it)->getName(), (it)->getArea());
             threads.push_back(std::move(th));
         }
     }
-    for(unsigned int i = 0; i < threads.size(); i++)
-    {
-        threads[i].join();
+//    for(unsigned int i = 0; i < threads.size(); i++)
+//    {
+//        threads[i].join();
+//    }
+    for(auto& ithread : threads){
+        ithread.join();
     }
+//    for(std::thread mthread: threads) // error use of deleted function std::thread::(...)
+//    {
+//        mthread.join();
+//    }
 }
 
-void findFirstShapeMatchingPredicate(const Collection& collection,
+auto findFirstShapeMatchingPredicate(const Collection& collection,
                                      bool (*predicate)(Shape* s),
                                      std::string info)
 {
-    Collection::const_iterator iter = std::find_if(collection.begin(), collection.end(), predicate);
+//    Collection::const_iterator iter = std::find_if(collection.begin(), collection.end(), predicate);
+    auto iter = std::find_if(collection.begin(), collection.end(), predicate);
     if(*iter != nullptr)
     {
         cout << std::endl << "First shape matching predicate: " << info << endl;
@@ -92,7 +115,7 @@ void findFirstShapeMatchingPredicate(const Collection& collection,
 class BlockingQueue
 {
 public:
-    void push(Shape* shape)
+    auto push(Shape* shape)
     {
         // TODO
     }
@@ -106,12 +129,12 @@ public:
 
 BlockingQueue g_queue;
 
-void runQueue()
+auto runQueue()
 {
-    bool running = true;
+    constexpr auto running = true;
     while(running)
     {
-        Shape * shape = g_queue.pop();
+        auto * shape = g_queue.pop();
         if(shape == nullptr)
         {
             std::cout << "Queue received nullptr, finishing loop" << std::endl;
@@ -124,24 +147,48 @@ void runQueue()
     }
 }
 
-void pushShapesToQueue(Collection const& shapes)
+auto pushShapesToQueue(Collection const& shapes)
 {
-    for(int i = 0; i < shapes.size(); ++i)
-    {
-        g_queue.push(shapes[i]);
+//    for(int i = 0; i < shapes.size(); ++i)
+//    {
+//        g_queue.push(shapes[i]);
+//    }
+    for(auto shape: shapes){
+        g_queue.push(shape);
     }
 }
 
 int main()
 {
-    Collection shapes;
-    shapes.push_back(new Circle(2.0));
-    shapes.push_back(new Circle(3.0));
-    shapes.push_back(nullptr);
-    shapes.push_back(new Circle(4.0));
-    shapes.push_back(new Rectangle(10.0, 5.0));
-    shapes.push_back(new Square(3.0));
-    shapes.push_back(new Circle(4.0));
+    unique_ptr<Circle> cir(new Circle(2.0, Colors::BLUE));
+    std::cout << sizeof(cir) << std::endl;
+    std::cout << alignof(cir) << std::endl;
+    std::cout << (cir)->getPi() << std::endl;
+
+
+    alignas(64) double   a;
+
+    a = 2342.2133213;
+    std::cout << alignof(a) <<"  " << a<< std::endl;
+
+
+//    Collection shapes;
+//    shapes.push_back(new Circle(2.0, Colors::BLUE));
+//    shapes.push_back(new Circle(3.0, Colors::BLUE));
+//    shapes.push_back(nullptr);
+//    shapes.push_back(new Circle(4.0, Colors::BLUE));
+//    shapes.push_back(new Rectangle(10.0, 5.0, Colors::BLUE));
+//    shapes.push_back(new Square(3.0, Colors::BLUE));
+//    shapes.push_back(new Circle(4.0, Colors::BLUE));
+
+    Collection shapes{
+        new Circle(2.0, Colors::BLUE),
+        new Circle(3.0, Colors::BLUE),
+        nullptr,
+        new Circle(4.0, Colors::BLUE),
+        new Rectangle(10.0, 5.0, Colors::BLUE),
+        new Square(3.0, Colors::BLUE),
+        new Circle(4.0, Colors::BLUE)};
 
     printCollectionElements(shapes);
 
@@ -153,8 +200,7 @@ int main()
     cout << std::endl << "Areas after sort: " << std::endl;
     printAreas(shapes);
 
-    Square* square = new Square(4.0);
-    shapes.push_back(square);
+    auto square = new Square(4.0, Colors::BLUE);
 
     findFirstShapeMatchingPredicate(shapes, perimeterBiggerThan20, "perimeter bigger than 20");
     findFirstShapeMatchingPredicate(shapes, areaLessThan10, "area less than 10");
