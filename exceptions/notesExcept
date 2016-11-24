@@ -1,0 +1,27 @@
+
+///errors by return value
+///errors are ignored
+
+
+exception cased that our program could be not exception safe
+
+throw
+tworzy obiekt wyjątku obiekt ten przekazyway jest do bloku obsługi wyjątku
+
+
+kolejność łapania wyjątków
+taka jak zdefiniowane
+
+
+możemy całą funkcję objąć blokiem try
+a także zastosować try przed listą inicjalizacyjną
+
+explicit oznacza, że nigdy nie zajdzie niejawna konwersja
+
+
+slicing
+jeśli nie mamy do czynienia ze wskaźnikami ani referencją
+to będzieobcięta funkcjonalność klasy potomnej
+
+
+nested exception
