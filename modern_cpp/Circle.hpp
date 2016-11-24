@@ -2,20 +2,24 @@
 
 #include "Shape.hpp"
 
-class Circle : public Shape
+class alignas(4) Circle final : public Shape
 {
 public:
-    Circle(double r);
+    Circle() = delete;
+    Circle(double r, Colors col);
     Circle(const Circle & other);
 
-    double getArea() const;
-    double getPerimeter() const;
-    double getRadius() const;
+    virtual double getArea() const noexcept override final;
+    virtual double getPerimeter() const noexcept override final;
+    virtual double getRadius() const final;
     std::string getName() const;
     void print() const;
 
+
+    [[deprecated("deprecated because I say so")]] double getPi() const;
+
 private:
-    Circle(); // doesn't allow to call default constructor
+//    Circle(); // doesn't allow to call default constructor
 
     double r_;
 };

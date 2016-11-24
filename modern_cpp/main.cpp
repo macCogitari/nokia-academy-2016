@@ -3,41 +3,43 @@
 #include <algorithm>
 #include <string>
 #include <thread>
+#include <memory>
 #include "Shape.hpp"
 #include "Rectangle.hpp"
 #include "Square.hpp"
 #include "Circle.hpp"
 
+
 using namespace std;
 
-using  Collection = vector<Shape*>;
+using  Collection = std::vector<std::shared_ptr<Shape> >;
 
-constexpr auto sortByArea(Shape* first, Shape* second)
-{
-    if(first != nullptr &&  second != nullptr)
-    {
-        return (first->getArea() < second->getArea());
-    }
-    return false;
-}
+//auto sortByArea( std::shared_ptr<const Shape> const& first,  std::shared_ptr<const Shape> const& second)
+//{
+//    if(first != nullptr &&  second != nullptr)
+//    {
+//        return (first->getArea() < second->getArea());
+//    }
+//    return false;
+//}
 
-constexpr auto perimeterBiggerThan20(Shape* s)
-{
-    if(s)
-    {
-        return (s->getPerimeter() > 20);
-    }
-    return false;
-}
+//auto perimeterBiggerThan20(std::shared_ptr<const Shape> const& s)
+//{
+//    if(s)
+//    {
+//        return (s->getPerimeter() > 20);
+//    }
+//    return false;
+//}
 
-constexpr auto areaLessThan10(Shape* s)
-{
-    if(s)
-    {
-        return (s->getArea() < 10);
-    }
-    return false;
-}
+//auto areaLessThan10(std::shared_ptr<const Shape> const& s)
+//{
+//    if(s)
+//    {
+//        return (s->getArea() < 10);
+//    }
+//    return false;
+//}
 
 auto printCollectionElements(const Collection& collection)
 {
@@ -95,7 +97,7 @@ auto printAreas(const Collection& collection)
 }
 
 auto findFirstShapeMatchingPredicate(const Collection& collection,
-                                     bool (*predicate)(Shape* s),
+                                     bool (*predicate)(std::shared_ptr<const Shape>const& s),
                                      std::string info)
 {
 //    Collection::const_iterator iter = std::find_if(collection.begin(), collection.end(), predicate);
@@ -115,12 +117,12 @@ auto findFirstShapeMatchingPredicate(const Collection& collection,
 class BlockingQueue
 {
 public:
-    auto push(Shape* shape)
+    auto push(std::shared_ptr<Shape> shape)
     {
         // TODO
     }
 
-    Shape* pop()
+    std::shared_ptr<Shape> pop()
     {
         // TODO
         return nullptr;
@@ -134,7 +136,8 @@ auto runQueue()
     constexpr auto running = true;
     while(running)
     {
-        auto * shape = g_queue.pop();
+//        auto * shape = g_queue.pop();
+        std::shared_ptr<Shape> shape = g_queue.pop();
         if(shape == nullptr)
         {
             std::cout << "Queue received nullptr, finishing loop" << std::endl;
@@ -158,12 +161,20 @@ auto pushShapesToQueue(Collection const& shapes)
     }
 }
 
+template<class DerivedType, class... Arguments>
+std::shared_ptr<Shape>
+make_shape(Arguments&&... args){
+    std::shared_ptr<Shape> newShape = std::make_shared<DerivedType>(std::forward<Arguments>(args)...);
+    return newShape;
+}
+
 int main()
 {
+
     unique_ptr<Circle> cir(new Circle(2.0, Colors::BLUE));
     std::cout << sizeof(cir) << std::endl;
     std::cout << alignof(cir) << std::endl;
-    std::cout << (cir)->getPi() << std::endl;
+//    std::cout << (cir)->getPi() << std::endl;
 
 
     alignas(64) double   a;
@@ -181,26 +192,65 @@ int main()
 //    shapes.push_back(new Square(3.0, Colors::BLUE));
 //    shapes.push_back(new Circle(4.0, Colors::BLUE));
 
+//    Collection shapes{
+//        std::make_shape<Circle>(2.0, Colors::BLUE),
+//        std::make_shared<Circle>(3.0, Colors::BLUE),
+//        nullptr,
+//        std::make_shared<Circle>(4.0, Colors::BLUE),
+//        std::make_shared<Rectangle>(10.0, 5.0, Colors::BLUE),
+//        std::make_shared<Square>(3.0, Colors::BLUE),
+//        std::make_shared<Circle>(4.0, Colors::BLUE)};
+
     Collection shapes{
-        new Circle(2.0, Colors::BLUE),
-        new Circle(3.0, Colors::BLUE),
+        make_shape<Circle>(2.0, Colors::BLUE),
+        make_shape<Circle>(3.0, Colors::BLUE),
         nullptr,
-        new Circle(4.0, Colors::BLUE),
-        new Rectangle(10.0, 5.0, Colors::BLUE),
-        new Square(3.0, Colors::BLUE),
-        new Circle(4.0, Colors::BLUE)};
+        make_shape<Circle>(4.0, Colors::BLUE),
+        make_shape<Rectangle>(10.0, 5.0, Colors::BLUE),
+        make_shape<Square>(3.0, Colors::BLUE),
+        make_shape<Circle>(4.0, Colors::BLUE)};
 
     printCollectionElements(shapes);
 
     cout << std::endl << "Areas before sort: " << std::endl;
     printAreas(shapes);
 
+
+    auto sortByArea = []( std::shared_ptr<const Shape> const& first,  std::shared_ptr<const Shape> const& second)
+    {
+        if(first != nullptr &&  second != nullptr)
+        {
+            return (first->getArea() < second->getArea());
+        }
+        return false;
+    };
+
+
     std::sort(shapes.begin(), shapes.end(), sortByArea);
 
     cout << std::endl << "Areas after sort: " << std::endl;
     printAreas(shapes);
 
-    auto square = new Square(4.0, Colors::BLUE);
+    std::shared_ptr<Shape> square = std::make_shared<Square>(4.0, Colors::BLUE);
+
+    auto perimeterBiggerThan20 = [](std::shared_ptr<const Shape> const& s)
+    {
+        if(s)
+        {
+            return (s->getPerimeter() > 20);
+        }
+        return false;
+    };
+
+    auto areaLessThan10 = [](std::shared_ptr<const Shape> const& s)
+    {
+        if(s)
+        {
+            return (s->getArea() < 10);
+        }
+        return false;
+    };
+
 
     findFirstShapeMatchingPredicate(shapes, perimeterBiggerThan20, "perimeter bigger than 20");
     findFirstShapeMatchingPredicate(shapes, areaLessThan10, "area less than 10");

@@ -2,3 +2,109 @@
 
 
 static_assert -> podczas kompilacji
+
+
+i
+
+można twożyć aliasy szablonowe
+
+
+
+
+scoped enums
+
+enum struct Lang{
+    ENG,
+    GER,
+    POL
+};
+
+enum class Lang{
+    ENG,
+    GER,
+    POL
+};
+
+
+automatyczna dedukcja typów
+
+
+decltype
+w przeciwieństwie do auto można przekazać jako parametr typu
+
+pułapka decltype
+
+decltype(auto)
+zachowuje wszystkie modyfikatory, które auto by zgubiło
+
+new syntax of function declaration
+auto sum(int a, int b) -> int;
+
+template <typename T1, typename T2>
+auto add(T1 a, T2 b) -> decltype(a+b)
+{
+  return a + b;
+}
+
+Automatic deduction of returned type c++14
+
+nie można w klasie sobie tego zdefiniować
+i nie można używać forward deklaracji
+
+jeśli funkcję się zdefiniuje w ciele klasy wtedy jest inline
+i można używać auto
+
+-----------------------
+
+default możemy oznaczyć tylko 6 podstawowych metod
+domyślny konstruktor
+i destruktor
+konstruktor kopiujący
+i konstruktor przenoszący
+
+
+------------------------------------------
+delete może być oznaczona dowolna funkcja
+
+unikanie niejawnych konwersji
+jeśli chcemy uniknąć przeciążeń dla pewnych typów
+
+void integral_only(int a)
+{
+}
+void integral_only(double d) = delete
+
+Uniform variable initialization
+problem
+most vexing paths
+
+konstruktor z std::initializer_list<Type>
+ma priorytet nad konstruktorem z parametrami
+
+konstruktor kopiujący vs konstruktor przenoszący
+operator kopiujący vs operator przenoszący
+
+
+uniwersalna referencja występuje tylko w szablonach
+collapsing reference
+
+-----------------------------------------
+
+Delegating constructors
+od c++11 wywoływanie konstruktora w obrębie klasy na liście inicjalizacyjnej innego konstruktora,
+ale wtedy nie może być już nic na tej liście inicjalizacyjnej
+
+
+---------------------
+
+generic lambdas
+
+jedyna funkcja która może mieć w parametrach auto
+
+return[](auto a1, auto a2){....}
+
+
+elipses operator ...
+trzy kropki
+
+------------------
