@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/Proxy/src/HeavyClass.cpp
+iostream
+-
+HeavyClass.hpp
+/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/Proxy/src/HeavyClass.hpp
+
+/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/Proxy/src/HeavyClass.hpp
+
+/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/Proxy/src/MySmartPtr/MySmartPtr.hpp
+
+/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/Proxy/src/ThrowingFunction.cpp
+ThrowingFunction.hpp
+/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/Proxy/src/ThrowingFunction.hpp
+HeavyClass.hpp
+/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/Proxy/src/HeavyClass.hpp
+MySmartPtr.hpp
+/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/Proxy/src/MySmartPtr.hpp
+stdexcept
+-
+
+/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/Proxy/src/ThrowingFunction.hpp
+
+/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/Proxy/src/main.cpp
+ThrowingFunction.hpp
+/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/Proxy/src/ThrowingFunction.hpp
+iostream
+-
+stdexcept
+-
+

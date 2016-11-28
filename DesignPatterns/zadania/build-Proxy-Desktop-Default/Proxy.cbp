@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+   <FileVersion major="1" minor="6" />
+   <Project>
+      <Option title="Proxy" />
+      <Option makefile_is_custom="1" />
+      <Option compiler="gcc" />
+      <Option virtualFolders="CMake Files\;" />
+      <Build>
+      <Target title="all">
+         <Option working_dir="/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-Proxy-Desktop-Default" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-Proxy-Desktop-Default/Makefile&quot;  VERBOSE=1 all" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-Proxy-Desktop-Default/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-Proxy-Desktop-Default/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-Proxy-Desktop-Default/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="edit_cache">
+         <Option working_dir="/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-Proxy-Desktop-Default" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-Proxy-Desktop-Default/Makefile&quot;  VERBOSE=1 edit_cache" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-Proxy-Desktop-Default/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-Proxy-Desktop-Default/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-Proxy-Desktop-Default/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="rebuild_cache">
+         <Option working_dir="/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-Proxy-Desktop-Default" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-Proxy-Desktop-Default/Makefile&quot;  VERBOSE=1 rebuild_cache" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-Proxy-Desktop-Default/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-Proxy-Desktop-Default/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-Proxy-Desktop-Default/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="run">
+         <Option working_dir="/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-Proxy-Desktop-Default" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-Proxy-Desktop-Default/Makefile&quot;  VERBOSE=1 run" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-Proxy-Desktop-Default/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-Proxy-Desktop-Default/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-Proxy-Desktop-Default/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="Proxy">
+         <Option output="/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-Proxy-Desktop-Default/Proxy" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-Proxy-Desktop-Default" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/Proxy/src" />
+            <Add directory="/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/Proxy/src/MySmartPtr" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/6" />
+            <Add directory="/usr/include/c++/6/backward" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/6" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-Proxy-Desktop-Default/Makefile&quot;  VERBOSE=1 Proxy" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-Proxy-Desktop-Default/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-Proxy-Desktop-Default/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-Proxy-Desktop-Default/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="Proxy/fast">
+         <Option output="/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-Proxy-Desktop-Default/Proxy" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-Proxy-Desktop-Default" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/Proxy/src" />
+            <Add directory="/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/Proxy/src/MySmartPtr" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/6" />
+            <Add directory="/usr/include/c++/6/backward" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/6" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-Proxy-Desktop-Default/Makefile&quot;  VERBOSE=1 Proxy/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-Proxy-Desktop-Default/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-Proxy-Desktop-Default/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-Proxy-Desktop-Default/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      </Build>
+      <Unit filename="/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/Proxy/src/HeavyClass.cpp">
+         <Option target="Proxy"/>
+      </Unit>
+      <Unit filename="/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/Proxy/src/HeavyClass.hpp">
+         <Option target="Proxy"/>
+      </Unit>
+      <Unit filename="/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/Proxy/src/MySmartPtr/MySmartPtr.hpp">
+         <Option target="Proxy"/>
+      </Unit>
+      <Unit filename="/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/Proxy/src/ThrowingFunction.cpp">
+         <Option target="Proxy"/>
+      </Unit>
+      <Unit filename="/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/Proxy/src/ThrowingFunction.hpp">
+         <Option target="Proxy"/>
+      </Unit>
+      <Unit filename="/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/Proxy/src/main.cpp">
+         <Option target="Proxy"/>
+      </Unit>
+      <Unit filename="/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/Proxy/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\" />
+      </Unit>
+   </Project>
+</CodeBlocks_project_file>

@@ -1,24 +1,30 @@
 #include "Clients.hpp"
 #include <iostream>
 
-Chart::Chart(Database &db)
-    :database(db)
+Chart::Chart(Observer& obs)
+    : _obs(obs)
 {
+    std::function<void ()> func = std::bind(&Chart::plot, this);
+    id = _obs.subscribe(func);
 }
 
-Calculator::Calculator(Database &db)
-    :database(db)
+Calculator::Calculator(Observer& obs)
+    :_obs(obs)
 {
+    std::function<void ()> func = std::bind(&Calculator::recalculate, this);
+    id = _obs.subscribe(func);
 }
 
-EmailSender::EmailSender(Database &db)
-    :database(db)
+EmailSender::EmailSender(Database &db, Observer& obs)
+    :database(db), _obs(obs)
 {
+    std::function<void ()> func = std::bind(&EmailSender::send, this);
+    id = _obs.subscribe(func);
 }
 
 void Calculator::recalculate()
 {
-    std::cout << "Calculator::recalculate()   " << database.getData("calculator") << "\n";
+//    std::cout << "Calculator::recalculate()   " << database.getData("calculator") << "\n";
 }
 
 void EmailSender::send()
@@ -28,5 +34,5 @@ void EmailSender::send()
 
 void Chart::plot()
 {
-    std::cout << "Chart::plot()   " << database.getData("chart") << "\n";
+//    std::cout << "Chart::plot()   " << database.getData("chart") << "\n";
 }

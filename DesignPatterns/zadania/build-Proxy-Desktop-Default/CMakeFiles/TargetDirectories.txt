@@ -1,0 +1,4 @@
+/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-Proxy-Desktop-Default/CMakeFiles/edit_cache.dir
+/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-Proxy-Desktop-Default/CMakeFiles/rebuild_cache.dir
+/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-Proxy-Desktop-Default/CMakeFiles/run.dir
+/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-Proxy-Desktop-Default/CMakeFiles/Proxy.dir

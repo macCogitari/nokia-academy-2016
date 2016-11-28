@@ -1,0 +1,1 @@
+/usr/bin/g++      CMakeFiles/FactoryMethod.dir/src/GsmPhone.cpp.o CMakeFiles/FactoryMethod.dir/src/LtePhone.cpp.o CMakeFiles/FactoryMethod.dir/src/WcdmaPhone.cpp.o CMakeFiles/FactoryMethod.dir/src/main.cpp.o  -o FactoryMethod -rdynamic 

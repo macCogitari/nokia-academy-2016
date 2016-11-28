@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/Observer/src/Clients.cpp
+Clients.hpp
+/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/Observer/src/Clients.hpp
+iostream
+-
+
+/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/Observer/src/Clients.hpp
+Database.hpp
+/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/Observer/src/Database.hpp
+Observer.hpp
+/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/Observer/src/Observer.hpp
+
+/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/Observer/src/Database.cpp
+Database.hpp
+/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/Observer/src/Database.hpp
+Clients.hpp
+/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/Observer/src/Clients.hpp
+iostream
+-
+
+/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/Observer/src/Database.hpp
+string
+-
+Observer.hpp
+/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/Observer/src/Observer.hpp
+
+/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/Observer/src/Observer/Observer.hpp
+functional
+-
+map
+-
+
+/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/Observer/src/main.cpp
+Clients.hpp
+/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/Observer/src/Clients.hpp
+Database.hpp
+/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/Observer/src/Database.hpp
+

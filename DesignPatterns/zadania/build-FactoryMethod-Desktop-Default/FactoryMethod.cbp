@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+   <FileVersion major="1" minor="6" />
+   <Project>
+      <Option title="FactoryMethod" />
+      <Option makefile_is_custom="1" />
+      <Option compiler="gcc" />
+      <Option virtualFolders="CMake Files\;" />
+      <Build>
+      <Target title="all">
+         <Option working_dir="/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-FactoryMethod-Desktop-Default" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-FactoryMethod-Desktop-Default/Makefile&quot;  VERBOSE=1 all" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-FactoryMethod-Desktop-Default/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-FactoryMethod-Desktop-Default/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-FactoryMethod-Desktop-Default/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="rebuild_cache">
+         <Option working_dir="/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-FactoryMethod-Desktop-Default" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-FactoryMethod-Desktop-Default/Makefile&quot;  VERBOSE=1 rebuild_cache" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-FactoryMethod-Desktop-Default/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-FactoryMethod-Desktop-Default/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-FactoryMethod-Desktop-Default/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="run">
+         <Option working_dir="/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-FactoryMethod-Desktop-Default" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-FactoryMethod-Desktop-Default/Makefile&quot;  VERBOSE=1 run" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-FactoryMethod-Desktop-Default/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-FactoryMethod-Desktop-Default/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-FactoryMethod-Desktop-Default/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="edit_cache">
+         <Option working_dir="/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-FactoryMethod-Desktop-Default" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-FactoryMethod-Desktop-Default/Makefile&quot;  VERBOSE=1 edit_cache" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-FactoryMethod-Desktop-Default/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-FactoryMethod-Desktop-Default/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-FactoryMethod-Desktop-Default/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="FactoryMethod">
+         <Option output="/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-FactoryMethod-Desktop-Default/FactoryMethod" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-FactoryMethod-Desktop-Default" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/6" />
+            <Add directory="/usr/include/c++/6/backward" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/6" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-FactoryMethod-Desktop-Default/Makefile&quot;  VERBOSE=1 FactoryMethod" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-FactoryMethod-Desktop-Default/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-FactoryMethod-Desktop-Default/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-FactoryMethod-Desktop-Default/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="FactoryMethod/fast">
+         <Option output="/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-FactoryMethod-Desktop-Default/FactoryMethod" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-FactoryMethod-Desktop-Default" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/6" />
+            <Add directory="/usr/include/c++/6/backward" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/6" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-FactoryMethod-Desktop-Default/Makefile&quot;  VERBOSE=1 FactoryMethod/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-FactoryMethod-Desktop-Default/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-FactoryMethod-Desktop-Default/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/build-FactoryMethod-Desktop-Default/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      </Build>
+      <Unit filename="/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/FactoryMethod/src/GsmPhone.cpp">
+         <Option target="FactoryMethod"/>
+      </Unit>
+      <Unit filename="/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/FactoryMethod/src/GsmPhone.hpp">
+         <Option target="FactoryMethod"/>
+      </Unit>
+      <Unit filename="/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/FactoryMethod/src/IPhone.hpp">
+         <Option target="FactoryMethod"/>
+      </Unit>
+      <Unit filename="/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/FactoryMethod/src/LtePhone.cpp">
+         <Option target="FactoryMethod"/>
+      </Unit>
+      <Unit filename="/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/FactoryMethod/src/LtePhone.hpp">
+         <Option target="FactoryMethod"/>
+      </Unit>
+      <Unit filename="/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/FactoryMethod/src/WcdmaPhone.cpp">
+         <Option target="FactoryMethod"/>
+      </Unit>
+      <Unit filename="/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/FactoryMethod/src/WcdmaPhone.hpp">
+         <Option target="FactoryMethod"/>
+      </Unit>
+      <Unit filename="/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/FactoryMethod/src/main.cpp">
+         <Option target="FactoryMethod"/>
+      </Unit>
+      <Unit filename="/home/mtrojnar/na/NAfork/nokia-academy-2016/DesignPatterns/zadania/FactoryMethod/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\" />
+      </Unit>
+   </Project>
+</CodeBlocks_project_file>

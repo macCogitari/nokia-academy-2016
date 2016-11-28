@@ -1,0 +1,1 @@
+/usr/bin/g++      CMakeFiles/Proxy.dir/src/HeavyClass.cpp.o CMakeFiles/Proxy.dir/src/ThrowingFunction.cpp.o CMakeFiles/Proxy.dir/src/main.cpp.o  -o Proxy -rdynamic 

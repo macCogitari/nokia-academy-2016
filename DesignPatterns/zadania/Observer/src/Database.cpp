@@ -2,16 +2,19 @@
 #include "Clients.hpp"
 #include <iostream>
 
-Database::Database()
-    : data("dummy data")
+Database::Database(Observer& obs)
+    : data("dummy data"), _obs(obs)
 {
+//    _obs = nullptr;
+//    _obs = obs;
 }
 
-void Database::initialize(Chart* chart, Calculator* calculator, EmailSender* emailSender)
+void Database::initialize()
 {
-    chartHandler = chart;
-    calculatorHandler = calculator;
-    emailSenderHandler = emailSender;
+//    _obs = obs;
+//    chartHandler = chart;
+//    calculatorHandler = calculator;
+//    emailSenderHandler = emailSender;
 }
 
 void Database::changeData(std::string newData)
@@ -22,9 +25,10 @@ void Database::changeData(std::string newData)
 
 void Database::onChange()
 {
-  chartHandler->plot();
-  calculatorHandler->recalculate();
-  emailSenderHandler->send();
+  _obs.notify();
+//  chartHandler->plot();
+//  calculatorHandler->recalculate();
+//  emailSenderHandler->send();
 }
 
 std::string Database::getData(std::string query)

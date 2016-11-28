@@ -3,18 +3,19 @@
 
 int main()
 {
-    Database database;
+    Observer obs;
+    Database database(obs);
 
-    Chart chart(database);
-    Calculator calculator(database);
+    Chart chart(obs);
+    Calculator calculator(obs);
 
-    {
-        EmailSender emailSender(database);
+    //{
+        EmailSender emailSender(database, obs);
 
-        database.initialize(&chart, &calculator, &emailSender);
+        database.initialize();
 
         database.changeData("top sectret");
-    }
+    //}
 
     database.changeData("other sectret"); // what is wrong with this code?
                                             // I expect to no email sending, but application crashed... ;(

@@ -1,0 +1,1 @@
+/usr/bin/g++      CMakeFiles/Observer.dir/src/Clients.cpp.o CMakeFiles/Observer.dir/src/Database.cpp.o CMakeFiles/Observer.dir/src/main.cpp.o  -o Observer -rdynamic 

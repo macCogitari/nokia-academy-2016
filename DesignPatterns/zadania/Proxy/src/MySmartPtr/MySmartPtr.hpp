@@ -3,6 +3,8 @@
 template<typename T>
 class MySmartPtr
 {
+private:
+    T* ptr;
 public:
     MySmartPtr(T* objectToManage);
     ~MySmartPtr();
@@ -13,23 +15,26 @@ public:
 template<typename T>
 MySmartPtr<T>::MySmartPtr(T *objectToManage)
 {
-    //implement me!
+//    delete ptr;
+//    ptr = nullptr;
+    ptr = objectToManage;
 }
 
 template<typename T>
 MySmartPtr<T>::~MySmartPtr()
 {
-    //implement me!
+    delete ptr;
+    ptr = nullptr;
 }
 
 template<typename T>
 T* MySmartPtr<T>::operator->()
 {
-     //implement me!
+     return ptr;
 }
 
 template<typename T>
 T& MySmartPtr<T>::operator*()
 {
-      //implement me!
+      return *ptr;
 }
