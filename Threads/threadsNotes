@@ -1,0 +1,49 @@
+
+rejestry ymm
+
+rejestry ogólnego użycia
+
+pthread_t thread;
+pthread_create(&thread, NULL
+pthread_join(thread, &retval);
+// czemamy na zwrócenie wartości przez wątek
+
+zombie process
+
+grim ripper
+process pid 1
+
+
+w boost::thread
+
+jeśli nie wywołamy join albo detach
+przed destruktorem tego obiektu to
+wywoła się terminate
+
+joinable będzie true
+jeśli joinable będzie false
+to terminate się nie wywoła
+
+w std::thread
+
+nie ma zwracania wartości
+
+żeby zwrócić wartość
+trzeba stworzyć jakąś zmienną
+i przekazać referencję do std::thread
+
+
+std::thread::id std::this_thread::get_id();
+void std::this_thread::yield(); // ja wątek poddaję się
+
+
+std::this_thread::sleep_for
+std::this_thread::sleep_until
+
+C++98 i C++03 nie wiedzą co to wątek
+robią optymalizację która zakłada, że nikt inny nie odwołuje się do pamięci
+
+użycie wątków w tych standarcie jest zachowaniem niezdefiniowanym zawsze
+
+
+
