@@ -53,3 +53,19 @@ metastabilne stany
 
 wyalignowane inty do 4 i inne dane na x86 są atomowe
 tzn bezpieczne dla wątków
+
+
+pipelining na procesorze
+przetwarzanie potokowe
+
+kilka rzeczy które dzieją się na raz
+
+w czasie kiedy dekodowane są dane z cache'a
+to ładowane są z pamięci inne następne dane
+
+branch predictor
+sprawdza co jest bardziej prawdopodobne do przejścia do kolejnego brancha
+
+gcc godbold org c++
+
+
