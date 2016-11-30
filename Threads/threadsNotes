@@ -68,4 +68,18 @@ sprawdza co jest bardziej prawdopodobne do przejścia do kolejnego brancha
 
 gcc godbold org c++
 
+dead lock
+2 albo nawet jeden wątek czeka na locku przez wieczność
+
+live lock
+live lock to jak dwa wątki próbują cały czas coś zrobić
+
+try_lock próbuje zalokować
+jeśli się nie uda to mamy false i możemy się zająć czymś innym
+jeśli zwraca true to znaczy że lock się udał.
+
+lock będzie czakać aż będzie wolny mutex odblokowany
+
+
+
 
