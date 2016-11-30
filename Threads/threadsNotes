@@ -46,4 +46,10 @@ robią optymalizację która zakłada, że nikt inny nie odwołuje się do pami�
 użycie wątków w tych standarcie jest zachowaniem niezdefiniowanym zawsze
 
 
+micro code
+x86 to sprzętowy kompilator
 
+metastabilne stany
+
+wyalignowane inty do 4 i inne dane na x86 są atomowe
+tzn bezpieczne dla wątków
